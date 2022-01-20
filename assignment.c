@@ -9,7 +9,12 @@ int main() {
         arr[i]=scanf("%d",&arr[i]);
     }
     //making a temporary array for reference
-    int temp1[size]=arr;
+   int  temp1[size];
+    for (int i = 0; i < size; i++)
+    {
+        temp1[i]=arr[i];
+    }
+    
 //asking user for left or rigth rotation 
     int choice=0;
     printf("Choose 1 for left rotation");
@@ -23,7 +28,7 @@ int main() {
                         int temp[d];
                             for (int i = 0; i < d; i++)
                             {
-                            temp[i]=scanf("%d",&temp[i]);
+                            temp[i]=arr[i];
                             }
                     //now simply run the loop for size-d times to shift rest of the elements
                             for (int i = 0; i < size-d; i++)
@@ -41,9 +46,9 @@ int main() {
      if(choice==2)
     {
 int temp[d];
-for (int i = size-1-d; i < size; i++)
+for (int i = size-d; i < size; i++)
 {
-    temp[i]=scanf("%d",&temp[i]);
+    temp[i]=arr[i];
 }
 
             for (int i = d; i < size; i++)
@@ -64,7 +69,7 @@ for (int i = size-1-d; i < size; i++)
     //printing new array
     for (int i = 0; i < size; i++)
     {
-        printf("%d ",&arr[i])
+        printf("%d ",arr[i]);
     }
     
     return 0;
